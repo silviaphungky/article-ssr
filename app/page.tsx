@@ -11,17 +11,13 @@ interface Article {
   slug: string
 }
 
-interface Props {
-  articles: Article[]
-}
-
 export const metadata: Metadata = {
   title: ' BrandTitle | Get articles about coding and software development',
   description:
     'Software development articles, includes programming, web development, backend development, and design.',
 }
 
-const Home: React.FC<Props> = async () => {
+const Home: React.FC = async () => {
   const headersList = headers()
   const domain = headersList.get('host')
   const res = await fetch(`http://${domain}/api/articles`)
