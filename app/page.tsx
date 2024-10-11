@@ -5,12 +5,6 @@ import ArticleTrending from './components/ArticleTrending'
 import { Metadata } from 'next'
 import { headers } from 'next/headers'
 
-interface Article {
-  id: number
-  title: string
-  slug: string
-}
-
 export const metadata: Metadata = {
   title: ' BrandTitle | Get articles about coding and software development',
   description:
