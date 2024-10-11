@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import ArticleSlider from './components/ArticleSlider'
 import ArticleList from './components/ArticleList'
 import Categories from './components/Categories'
@@ -15,8 +14,6 @@ interface Article {
 interface Props {
   articles: Article[]
 }
-
-const baseUrl = process.env.BASE_URL
 
 export const metadata: Metadata = {
   title: ' BrandTitle | Get articles about coding and software development',
