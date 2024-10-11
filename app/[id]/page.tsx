@@ -1,5 +1,5 @@
 import { Article } from '../components/ArticleSlider'
-import { Metadata, ResolvingMetadata } from 'next'
+import { Metadata } from 'next'
 import ArticleDetail from './components/ArticleDetail'
 import ArticlesSide from './components/ArticlesSide'
 import { headers } from 'next/headers'
@@ -12,10 +12,7 @@ interface Props {
   params: { id: number }
 }
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const headersList = headers()
   const domain = headersList.get('host')
 
